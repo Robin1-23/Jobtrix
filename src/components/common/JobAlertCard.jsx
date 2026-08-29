@@ -384,30 +384,38 @@ export function JobAlertCard() {
                 type="submit"
                 className="jx-btn"
                 style={{
-                  background: isPhoneComplete && areaName.trim().length >= 2 ? "#10192E" : "#CBD5E1",
+                  background: "#0F172A",
                   color: "#FFFFFF",
-                  border: "none",
+                  border: "1px solid rgba(255, 255, 255, 0.18)",
                   borderRadius: 999,
                   height: 54,
-                  padding: "0 34px",
+                  padding: "0 36px",
                   fontFamily: "'Space Grotesk', sans-serif",
-                  fontSize: 14.5,
+                  fontSize: 15,
                   fontWeight: 700,
-                  letterSpacing: "0.05em",
+                  letterSpacing: "0.06em",
                   cursor: "pointer",
-                  boxShadow: "0 4px 14px rgba(0, 0, 0, 0.08)",
-                  transition: "all 0.2s ease",
+                  boxShadow: "0 8px 24px rgba(15, 23, 42, 0.32)",
+                  transition: "all 0.25s cubic-bezier(0.16, 1, 0.3, 1)",
                   flexShrink: 0,
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 8,
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "#10192E";
+                  e.currentTarget.style.background = "linear-gradient(135deg, #1E293B 0%, #334155 100%)";
+                  e.currentTarget.style.transform = "translateY(-2px)";
+                  e.currentTarget.style.boxShadow = "0 12px 28px rgba(15, 23, 42, 0.42)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background =
-                    isPhoneComplete && areaName.trim().length >= 2 ? "#10192E" : "#CBD5E1";
+                  e.currentTarget.style.background = "#0F172A";
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow = "0 8px 24px rgba(15, 23, 42, 0.32)";
                 }}
               >
-                SUBMIT
+                <span>SUBMIT</span>
+                <span style={{ fontSize: 16, fontWeight: 800 }}>&rarr;</span>
               </button>
             </div>
           </form>
