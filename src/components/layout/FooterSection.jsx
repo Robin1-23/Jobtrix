@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { MapPin, Mail, AlertCircle } from "lucide-react";
+import { MapPin, Mail, AlertCircle, Phone } from "lucide-react";
 import { TOKENS } from "../../constants/tokens";
 import { Reveal, TextReveal } from "../common/Reveal";
 
@@ -345,23 +345,29 @@ export function FooterSection() {
             >
               Contact Details
             </h4>
-            <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
               <div style={{ display: "flex", alignItems: "flex-start", gap: 12, color: "rgba(255, 255, 255, 0.88)", fontSize: 14.5 }}>
                 <MapPin style={{ marginTop: 2, flexShrink: 0 }} size={18} color="#FFFFFF" strokeWidth={2.2} />
                 <span>Bangalore &amp; Gurgaon,<br />India</span>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: 12, color: "rgba(255, 255, 255, 0.88)", fontSize: 14.5 }}>
+                <Phone style={{ flexShrink: 0 }} size={18} color="#22C55E" strokeWidth={2.2} />
+                <a href="tel:+919991239374" style={{ color: "inherit", textDecoration: "none", fontWeight: 600 }}>
+                  +91 99912 39374
+                </a>
+              </div>
+              <div style={{ display: "flex", alignItems: "center", gap: 12, color: "rgba(255, 255, 255, 0.88)", fontSize: 14.5 }}>
                 <Mail style={{ flexShrink: 0 }} size={18} color="#FFFFFF" strokeWidth={2.2} />
-                <a href="mailto:info@jobtrix.ai" style={{ color: "inherit", textDecoration: "none" }}>
-                  info@jobtrix.ai
+                <a href="mailto:robinjain142001@gmail.com" style={{ color: "inherit", textDecoration: "none" }}>
+                  robinjain142001@gmail.com
                 </a>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: 12, color: "rgba(255, 255, 255, 0.88)", fontSize: 14.5 }}>
                 <svg style={{ flexShrink: 0 }} width="18" height="18" viewBox="0 0 24 24" fill="#25D366">
                   <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.79 14.07c-.24.68-1.4 1.25-1.93 1.29-.49.04-1.12.06-3.62-.97-2.94-1.21-4.83-4.22-4.98-4.42-.14-.2-1.19-1.58-1.19-3.02s.75-2.14 1.02-2.43c.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 2.03.9 2.18.07.15.12.32.02.52-.1.2-.15.32-.3.49-.15.17-.31.38-.45.51-.15.15-.31.31-.13.62.18.31.8 1.32 1.72 2.14 1.18 1.05 2.18 1.38 2.49 1.53.31.15.49.14.67-.08.19-.22.78-.91.99-1.22.21-.31.42-.26.71-.15.29.11 1.83.86 2.14 1.02.31.15.52.23.6.36.07.13.07.76-.17 1.44z" />
                 </svg>
-                <a href="https://wa.me/919142252116" target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "none" }}>
-                  +91 91422 52116
+                <a href="https://wa.me/919991239374" target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "none" }}>
+                  WhatsApp: +91 99912 39374
                 </a>
               </div>
             </div>

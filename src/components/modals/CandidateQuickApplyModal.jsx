@@ -72,7 +72,7 @@ export function CandidateQuickApplyModal({ isOpen, onClose, job }) {
       `Hi Jobtrix, my name is ${name.trim()}. I just applied for the ${targetJobTitle} role at ${city.trim()} via Jobtrix. Please share my joining details.`
     );
     setTimeout(() => {
-      window.open(`https://wa.me/919142252116?text=${waText}`, "_blank");
+      window.open(`https://wa.me/919991239374?text=${waText}`, "_blank");
     }, 400);
   };
 
