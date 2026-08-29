@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { MapPin, Mail, AlertCircle, Phone } from "lucide-react";
 import { TOKENS } from "../../constants/tokens";
 import { Reveal, TextReveal } from "../common/Reveal";
+import { JobtrixLogoIcon } from "../common/JobtrixLogoIcon";
 
 // Strict Indian Mobile Number Regex: 10 digits starting with 6, 7, 8, or 9
 export const PHONE_REGEX = /^[6-9]\d{9}$/;
@@ -242,18 +243,8 @@ export function FooterSection() {
         >
           {/* Column 1: Brand & Description */}
           <div>
-            <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20 }}>
-              <svg width="30" height="24" viewBox="0 0 32 26" fill="none">
-                <path
-                  d="M2 18 C8 8 20 4 30 2 C26 14 16 22 4 24 C1 24 0 21 2 18 Z"
-                  fill={TOKENS.amber}
-                />
-                <path
-                  d="M10 16 C16 10 24 8 28 6 C24 14 18 18 10 20 Z"
-                  fill="#FFFFFF"
-                  opacity="0.3"
-                />
-              </svg>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
+              <JobtrixLogoIcon size={38} />
               <span
                 style={{
                   fontFamily: "'Space Grotesk', sans-serif",

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import { TOKENS } from "../../constants/tokens";
+import { JobtrixLogoIcon } from "../common/JobtrixLogoIcon";
 
 export function Navbar() {
   const [nav, setNav] = useState(false);
@@ -101,25 +102,9 @@ export function Navbar() {
           justifyContent: "space-between",
         }}
       >
-        <Link to="/" style={{ display: "flex", alignItems: "center", gap: 8, textDecoration: "none", color: "inherit" }}>
-          <div
-            style={{
-              width: 30,
-              height: 30,
-              borderRadius: 7,
-              background: TOKENS.navy,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: TOKENS.amber,
-              fontFamily: "'Space Grotesk', sans-serif",
-              fontWeight: 700,
-              fontSize: 13,
-            }}
-          >
-            JX
-          </div>
-          <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: 18 }}>
+        <Link to="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none", color: "inherit" }}>
+          <JobtrixLogoIcon size={34} />
+          <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: 19, letterSpacing: "-0.015em", color: TOKENS.navy }}>
             Jobtrix
           </span>
         </Link>
