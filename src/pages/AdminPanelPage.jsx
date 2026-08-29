@@ -278,7 +278,7 @@ export function AdminPanelPage() {
               <input
                 type="password"
                 required
-                placeholder="Enter password (jobtrix@2026)"
+                placeholder="Enter master password"
                 value={passwordInput}
                 onChange={(e) => setPasswordInput(e.target.value)}
                 style={{
