@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobtrix - AI Hiring for Blue-Collar Teams</title>
+  </head>
+  <body style="margin: 0; padding: 0;">
+    <div id="root"></div>
+    <script>
+      window.addEventListener('error', function(e) {
+        console.error('GLOBAL ERROR:', e.error || e.message);
+        var box = document.getElementById('runtime-error-alert');
+        if (!box) {
+          box = document.createElement('div');
+          box.id = 'runtime-error-alert';
+          box.style = 'position:fixed;top:0;left:0;right:0;background:#DC2626;color:#FFF;padding:16px;z-index:9999999;font-family:sans-serif;font-size:14px;';
+          document.body.appendChild(box);
+        }
+        box.textContent = 'Runtime Exception: ' + (e.error ? (e.error.stack || e.error.message) : e.message);
+      });
+      window.addEventListener('unhandledrejection', function(e) {
+        console.error('UNHANDLED REJECTION:', e.reason);
+      });
+    </script>
+    <script type="module" src="/main.jsx"></script>
+  </body>
+</html>
