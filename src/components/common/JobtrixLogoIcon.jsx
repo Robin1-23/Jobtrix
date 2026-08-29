@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 
 export function JobtrixLogoIcon({ size = 32, style = {} }) {
   return (
