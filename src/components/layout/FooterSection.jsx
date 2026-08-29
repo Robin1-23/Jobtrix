@@ -114,45 +114,10 @@ export function FooterSection() {
             }}
           />
 
-          {/* Email Contact Form */}
-          {footerSent ? (
-            <div
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 10,
-                background: "rgba(255, 255, 255, 0.16)",
-                backdropFilter: "blur(10px)",
-                border: "1px solid rgba(255, 255, 255, 0.35)",
-                padding: "16px 30px",
-                borderRadius: 12,
-                color: "#FFFFFF",
-                fontSize: 15,
-                fontWeight: 600,
-              }}
-            >
-              <span
-                style={{
-                  width: 24,
-                  height: 24,
-                  borderRadius: "50%",
-                  background: "#22C55E",
-                  color: "#FFFFFF",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: 14,
-                  fontWeight: 700,
-                }}
-              >
-                ✓
-              </span>
-              Thank you! The Jobtrix team will reach out to you shortly.
-            </div>
-          ) : (
-            <form
-              onSubmit={submitFooterContact}
-              noValidate
+          {/* Phone Contact Form */}
+          <form
+            onSubmit={submitFooterContact}
+            noValidate
               className="jx-footer-form"
               style={{
                 display: "flex",
@@ -254,7 +219,6 @@ export function FooterSection() {
                 </div>
               )}
             </form>
-          )}
         </Reveal>
       </div>
 
