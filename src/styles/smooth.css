@@ -1,0 +1,143 @@
+/* ==========================================================================
+   JOBTRIX SMOOTH INTERACTION & PERFORMANCE LAYER
+   High-framerate hardware acceleration, spring physics & butter-smooth easing
+   ========================================================================== */
+
+:root {
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Global Butter-Smooth Scrolling & Text Crispness */
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #090D18;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 999px;
+  border: 2px solid #090D18;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Hardware Accelerated Interactive Micro-Transitions */
+a, button {
+  transition: transform 0.24s var(--ease-spring), 
+              box-shadow 0.24s var(--ease-spring), 
+              background-color 0.2s ease, 
+              color 0.2s ease, 
+              border-color 0.2s ease;
+}
+
+button:active, a:active {
+  transform: scale(0.975);
+}
+
+input, textarea, select {
+  transition: border-color 0.22s var(--ease-spring), 
+              box-shadow 0.22s var(--ease-spring), 
+              background-color 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.22);
+}
+
+/* Hardware-Accelerated Floating Hero Workers & Cards */
+@keyframes jx-gentle-float-a {
+  0%, 100% {
+    transform: translate3d(0, 0px, 0);
+  }
+  50% {
+    transform: translate3d(0, -9px, 0);
+  }
+}
+
+@keyframes jx-gentle-float-b {
+  0%, 100% {
+    transform: translate3d(0, 0px, 0);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0);
+  }
+}
+
+.jx-worker-tl {
+  animation: jx-gentle-float-a 6.8s ease-in-out infinite !important;
+  will-change: transform;
+}
+
+.jx-worker-tr {
+  animation: jx-gentle-float-b 7.4s ease-in-out infinite 0.7s !important;
+  will-change: transform;
+}
+
+.jx-worker-bl {
+  animation: jx-gentle-float-b 7.8s ease-in-out infinite 0.35s !important;
+  will-change: transform;
+}
+
+.jx-worker-br {
+  animation: jx-gentle-float-a 8.2s ease-in-out infinite 1.1s !important;
+  will-change: transform;
+}
+
+.jx-card-left {
+  animation: jx-gentle-float-b 6.2s ease-in-out infinite 1.2s !important;
+  will-change: transform;
+}
+
+.jx-card-right {
+  animation: jx-gentle-float-a 6.9s ease-in-out infinite 1.7s !important;
+  will-change: transform;
+}
+
+/* Pause animations if user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Hardware Acceleration for Infinite Marquees & Tickers */
+.jx-testimonials-marquee,
+.jx-float-worker,
+.jx-float-card {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+}
+
+/* Smooth Card Hover Lift */
+.jx-hover-lift {
+  transition: transform 0.28s var(--ease-spring), box-shadow 0.28s var(--ease-spring) !important;
+}
+.jx-hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -8px rgba(16, 25, 46, 0.16) !important;
+}

@@ -117,6 +117,8 @@ export function RosterTicker() {
           width: "max-content",
           animation: "roster-scroll 42s linear infinite",
           paddingLeft: 170,
+          willChange: "transform",
+          transform: "translate3d(0, 0, 0)",
         }}
       >
         {loop.map((item, i) => (
