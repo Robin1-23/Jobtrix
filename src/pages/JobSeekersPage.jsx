@@ -413,7 +413,7 @@ export function JobSeekersPage() {
       <Section bg="#FAFAFA" style={{ paddingTop: 36, paddingBottom: 48 }}>
         <Reveal>
           <a
-            href="https://wa.me/919142252116?text=Hi%20Jobtrix%2C%20I%20want%20to%20refer%20a%20friend%20for%20a%20job%20and%20earn%20the%20%E2%82%B93%2C000%20bonus."
+            href="https://wa.me/919991239374?text=Hi%20Jobtrix,%20I%20want%20to%20refer%20a%20friend%20for%20a%20job%20and%20earn%20the%20%E2%82%B93%2C000%20bonus."
             target="_blank"
             rel="noopener noreferrer"
             style={{

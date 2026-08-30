@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { TOKENS } from "../../constants/tokens";
 import { Section } from "../common/Section";
 import { Reveal, TextReveal } from "../common/Reveal";
@@ -83,9 +84,9 @@ export function TwoPathsSection() {
               </p>
             </div>
             <div>
-              <a href="#contact" style={{ color: TOKENS.amber, fontWeight: 700, fontSize: 15, textDecoration: "none", borderBottom: `2px solid ${TOKENS.amber}`, display: "inline-block" }}>
+              <Link to="/contact" style={{ color: TOKENS.amber, fontWeight: 700, fontSize: 15, textDecoration: "none", borderBottom: `2px solid ${TOKENS.amber}`, display: "inline-block" }}>
                 Talk to sales &rarr;
-              </a>
+              </Link>
             </div>
           </div>
         </Reveal>

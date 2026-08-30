@@ -286,8 +286,9 @@ export function SectorsStudioSection() {
                 </div>
 
                 <div style={{ marginTop: 32 }}>
-                  <a
-                    href="#contact"
+                  <button
+                    type="button"
+                    onClick={() => window.dispatchEvent(new CustomEvent("open-hire-modal"))}
                     className="jx-btn"
                     style={{
                       display: "inline-flex",
@@ -299,12 +300,13 @@ export function SectorsStudioSection() {
                       borderRadius: 10,
                       fontWeight: 700,
                       fontSize: 14,
-                      textDecoration: "none",
+                      border: "none",
+                      cursor: "pointer",
                       boxShadow: "0 4px 14px rgba(16, 25, 46, 0.15)",
                     }}
                   >
                     Deploy {current.shortName} team &rarr;
-                  </a>
+                  </button>
                 </div>
               </div>
 

@@ -130,7 +130,7 @@ export function ForWorkersSection() {
             {/* Purple WhatsApp Pill CTA Matching Screenshot */}
             <div style={{ display: "flex", justifyContent: "center", marginBottom: 26 }}>
               <a
-                href="https://wa.me/919142252116?text=Hi%20Jobtrix%2C%20I%20am%20looking%20for%20a%20delivery%20job%20opportunity."
+                href="https://wa.me/919991239374?text=Hi%20Jobtrix,%20I%20am%20looking%20for%20a%20delivery%20job%20opportunity."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="jx-btn"

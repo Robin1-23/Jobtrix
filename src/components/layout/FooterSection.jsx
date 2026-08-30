@@ -318,7 +318,7 @@ export function FooterSection() {
                 Post Requirement
               </button>
               <Link to="/admin" className="jx-footer-link" style={{ color: TOKENS.amber, fontWeight: 600 }}>Admin Portal &rarr;</Link>
-              <a href="#contact" className="jx-footer-link">Privacy Policy</a>
+              <Link to="/contact" className="jx-footer-link">Privacy Policy</Link>
             </div>
           </div>
 
