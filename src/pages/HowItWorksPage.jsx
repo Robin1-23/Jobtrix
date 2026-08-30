@@ -386,50 +386,133 @@ export function HowItWorksPage() {
       {/* 4. CLEAN TRUST METRICS STRIP */}
       <section
         style={{
-          background: "#10192E",
+          background: "#0A0F1D",
           color: "#FFFFFF",
-          padding: "48px 24px",
+          padding: "54px 24px",
+          borderTop: "1px solid rgba(255, 255, 255, 0.08)",
+          borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
         }}
       >
         <div
           style={{
-            maxWidth: 1040,
+            maxWidth: 1140,
             margin: "0 auto",
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-            gap: 28,
+            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+            gap: 20,
             textAlign: "center",
           }}
         >
-          <div>
-            <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 34, fontWeight: 700, color: "#F59E0B" }}>
-              <CountUp from={0} to={24} duration={1.5} /> Hours
+          {/* 1. 24h Deployment */}
+          <div
+            style={{
+              background: "rgba(255, 255, 255, 0.03)",
+              border: "1px solid rgba(255, 255, 255, 0.07)",
+              borderRadius: 16,
+              padding: "24px 18px",
+            }}
+          >
+            <div
+              style={{
+                fontFamily: "'Space Grotesk', sans-serif",
+                fontSize: "clamp(36px, 3.4vw, 42px)",
+                fontWeight: 800,
+                color: "#F59E0B",
+                lineHeight: 1,
+              }}
+            >
+              <CountUp from={0} to={24} duration={1.5} />h
             </div>
-            <div style={{ fontSize: 13, color: "#94A3B8", marginTop: 4 }}>Typical Onboarding Time</div>
+            <div style={{ fontSize: 15, fontWeight: 700, color: "#FFFFFF", marginTop: 10 }}>
+              Deployment Time
+            </div>
+            <div style={{ fontSize: 12.5, color: "#94A3B8", marginTop: 3 }}>
+              Fast on-site onboarding
+            </div>
           </div>
-          <div>
-            <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 34, fontWeight: 700, color: "#38BDF8" }}>
-              <CountUp
-                from={0}
-                to={100000}
-                separator=","
-                direction="up"
-                duration={2}
-              />+
+
+          {/* 2. 100,000+ Verified Workers */}
+          <div
+            style={{
+              background: "rgba(255, 255, 255, 0.03)",
+              border: "1px solid rgba(255, 255, 255, 0.07)",
+              borderRadius: 16,
+              padding: "24px 18px",
+            }}
+          >
+            <div
+              style={{
+                fontFamily: "'Space Grotesk', sans-serif",
+                fontSize: "clamp(36px, 3.4vw, 42px)",
+                fontWeight: 800,
+                color: "#38BDF8",
+                lineHeight: 1,
+              }}
+            >
+              <CountUp from={0} to={100000} separator="," duration={2} />+
             </div>
-            <div style={{ fontSize: 13, color: "#94A3B8", marginTop: 4 }}>Verified Workers</div>
+            <div style={{ fontSize: 15, fontWeight: 700, color: "#FFFFFF", marginTop: 10 }}>
+              Verified Workers
+            </div>
+            <div style={{ fontSize: 12.5, color: "#94A3B8", marginTop: 3 }}>
+              Aadhaar & DL verified
+            </div>
           </div>
-          <div>
-            <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 34, fontWeight: 700, color: "#4ADE80" }}>
-              ₹0 Fee
+
+          {/* 3. ₹0 Free for Candidates */}
+          <div
+            style={{
+              background: "rgba(255, 255, 255, 0.03)",
+              border: "1px solid rgba(255, 255, 255, 0.07)",
+              borderRadius: 16,
+              padding: "24px 18px",
+            }}
+          >
+            <div
+              style={{
+                fontFamily: "'Space Grotesk', sans-serif",
+                fontSize: "clamp(36px, 3.4vw, 42px)",
+                fontWeight: 800,
+                color: "#4ADE80",
+                lineHeight: 1,
+              }}
+            >
+              ₹0
             </div>
-            <div style={{ fontSize: 13, color: "#94A3B8", marginTop: 4 }}>100% Free for Candidates</div>
+            <div style={{ fontSize: 15, fontWeight: 700, color: "#FFFFFF", marginTop: 10 }}>
+              Free for Candidates
+            </div>
+            <div style={{ fontSize: 12.5, color: "#94A3B8", marginTop: 3 }}>
+              Zero registration or cut fees
+            </div>
           </div>
-          <div>
-            <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 34, fontWeight: 700, color: "#C084FC" }}>
-              <CountUp from={0} to={18} duration={1.8} />+ Top Brands
+
+          {/* 4. 18+ Top Brands */}
+          <div
+            style={{
+              background: "rgba(255, 255, 255, 0.03)",
+              border: "1px solid rgba(255, 255, 255, 0.07)",
+              borderRadius: 16,
+              padding: "24px 18px",
+            }}
+          >
+            <div
+              style={{
+                fontFamily: "'Space Grotesk', sans-serif",
+                fontSize: "clamp(36px, 3.4vw, 42px)",
+                fontWeight: 800,
+                color: "#C084FC",
+                lineHeight: 1,
+              }}
+            >
+              <CountUp from={0} to={18} duration={1.8} />+
             </div>
-            <div style={{ fontSize: 13, color: "#94A3B8", marginTop: 4 }}>Zomato, Swiggy, Flipkart & More</div>
+            <div style={{ fontSize: 15, fontWeight: 700, color: "#FFFFFF", marginTop: 10 }}>
+              Top Brands
+            </div>
+            <div style={{ fontSize: 12.5, color: "#94A3B8", marginTop: 3 }}>
+              Zomato, Swiggy, Flipkart & More
+            </div>
           </div>
         </div>
       </section>
