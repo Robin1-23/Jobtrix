@@ -10,6 +10,7 @@ import { JobSeekersPage } from "./src/pages/JobSeekersPage";
 import { HowItWorksPage } from "./src/pages/HowItWorksPage";
 import { ContactPage } from "./src/pages/ContactPage";
 import { AdminPanelPage } from "./src/pages/AdminPanelPage";
+import { NotFoundPage } from "./src/pages/NotFoundPage";
 import { EmployerApplicationModal } from "./src/components/modals/EmployerApplicationModal";
 import { UniversalApplicationModal } from "./src/components/modals/UniversalApplicationModal";
 
@@ -431,7 +432,7 @@ export default function JobtrixLanding() {
           <Route path="/how-it-works" element={<HowItWorksPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/admin" element={<AdminPanelPage />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
 
         {/* Global Footer */}
