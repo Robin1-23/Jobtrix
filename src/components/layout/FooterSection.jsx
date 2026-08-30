@@ -285,10 +285,10 @@ export function FooterSection() {
               Company
             </h4>
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              <a href="#employers" className="jx-footer-link">About Us</a>
-              <a href="#how" className="jx-footer-link">How It Works</a>
-              <a href="#sectors" className="jx-footer-link">Sectors We Serve</a>
-              <a href="#contact" className="jx-footer-link">Careers</a>
+              <Link to="/" className="jx-footer-link">About Us</Link>
+              <Link to="/how-it-works" className="jx-footer-link">How It Works</Link>
+              <Link to="/job-seekers" className="jx-footer-link">Sectors We Serve</Link>
+              <Link to="/contact" className="jx-footer-link">Contact Us</Link>
             </div>
           </div>
 

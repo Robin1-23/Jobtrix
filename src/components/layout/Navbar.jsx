@@ -16,69 +16,29 @@ export function Navbar() {
   const navItems = [
     { id: "employers", label: "For employers", path: "/" },
     { id: "workers", label: "For job seekers", path: "/job-seekers" },
-    { id: "how", label: "How it works", path: "/#how" },
-    { id: "contact", label: "Contact", path: "#contact" },
+    { id: "how", label: "How it works", path: "/how-it-works" },
+    { id: "contact", label: "Contact", path: "/contact" },
   ];
 
-  // Update active tab based on route and scroll position
+  // Update active tab based on current route
   useEffect(() => {
-    if (isJobSeekers) {
+    if (location.pathname === "/job-seekers" || location.pathname === "/workers") {
       setActiveTab("workers");
-      return;
+    } else if (location.pathname === "/how-it-works") {
+      setActiveTab("how");
+    } else if (location.pathname === "/contact") {
+      setActiveTab("contact");
+    } else {
+      setActiveTab("employers");
     }
-
-    const handleScroll = () => {
-      const sections = [
-        { id: "contact", offset: 350 },
-        { id: "how", offset: 250 },
-        { id: "employers", offset: 0 },
-      ];
-      const scrollPos = window.scrollY + 200;
-
-      for (const sec of sections) {
-        const el = document.getElementById(sec.id);
-        if (el && scrollPos >= el.offsetTop) {
-          setActiveTab(sec.id);
-          break;
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [isJobSeekers, location.pathname]);
+  }, [location.pathname]);
 
   const handleNavClick = (e, item) => {
     closeMobileNav();
-    if (item.id === "employers") {
-      e.preventDefault();
-      if (location.pathname !== "/") {
-        navigate("/");
-      } else {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-      setActiveTab("employers");
-    } else if (item.id === "workers") {
-      e.preventDefault();
-      navigate("/job-seekers");
-      setActiveTab("workers");
-    } else if (item.id === "how") {
-      e.preventDefault();
-      if (location.pathname !== "/") {
-        navigate("/");
-        setTimeout(() => {
-          document.getElementById("how")?.scrollIntoView({ behavior: "smooth" });
-        }, 150);
-      } else {
-        document.getElementById("how")?.scrollIntoView({ behavior: "smooth" });
-      }
-      setActiveTab("how");
-    } else if (item.id === "contact") {
-      e.preventDefault();
-      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-      setActiveTab("contact");
-    }
+    e.preventDefault();
+    navigate(item.path);
+    setActiveTab(item.id);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (

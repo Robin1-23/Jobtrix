@@ -7,6 +7,8 @@ import { MobileActionBar } from "./src/components/layout/MobileActionBar";
 import { ScrollToTop } from "./src/components/common/ScrollToTop";
 import { HomePage } from "./src/pages/HomePage";
 import { JobSeekersPage } from "./src/pages/JobSeekersPage";
+import { HowItWorksPage } from "./src/pages/HowItWorksPage";
+import { ContactPage } from "./src/pages/ContactPage";
 import { AdminPanelPage } from "./src/pages/AdminPanelPage";
 import { EmployerApplicationModal } from "./src/components/modals/EmployerApplicationModal";
 
@@ -225,6 +227,10 @@ export default function JobtrixLanding() {
             .jx-value-header-dot {
               display: none !important;
             }
+            .jx-contact-grid {
+              grid-template-columns: 1fr !important;
+              gap: 36px !important;
+            }
           }
 
           @media (max-width: 440px) {
@@ -399,6 +405,8 @@ export default function JobtrixLanding() {
           <Route path="/" element={<HomePage />} />
           <Route path="/job-seekers" element={<JobSeekersPage />} />
           <Route path="/workers" element={<Navigate to="/job-seekers" replace />} />
+          <Route path="/how-it-works" element={<HowItWorksPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/admin" element={<AdminPanelPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
