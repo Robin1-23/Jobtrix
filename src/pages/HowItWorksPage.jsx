@@ -20,6 +20,7 @@ import { TOKENS } from "../constants/tokens";
 import { Section } from "../components/common/Section";
 import { Reveal, TextReveal } from "../components/common/Reveal";
 import { RosterTicker } from "../components/ticker/RosterTicker";
+import CountUp from "../components/common/CountUp";
 
 export function HowItWorksPage() {
   const [activeAudience, setActiveAudience] = useState("employer");
@@ -402,13 +403,19 @@ export function HowItWorksPage() {
         >
           <div>
             <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 34, fontWeight: 700, color: "#F59E0B" }}>
-              24 Hours
+              <CountUp from={0} to={24} duration={1.5} /> Hours
             </div>
             <div style={{ fontSize: 13, color: "#94A3B8", marginTop: 4 }}>Typical Onboarding Time</div>
           </div>
           <div>
             <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 34, fontWeight: 700, color: "#38BDF8" }}>
-              100,000+
+              <CountUp
+                from={0}
+                to={100000}
+                separator=","
+                direction="up"
+                duration={2}
+              />+
             </div>
             <div style={{ fontSize: 13, color: "#94A3B8", marginTop: 4 }}>Verified Workers</div>
           </div>
@@ -420,7 +427,7 @@ export function HowItWorksPage() {
           </div>
           <div>
             <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 34, fontWeight: 700, color: "#C084FC" }}>
-              18+ Top Brands
+              <CountUp from={0} to={18} duration={1.8} />+ Top Brands
             </div>
             <div style={{ fontSize: 13, color: "#94A3B8", marginTop: 4 }}>Zomato, Swiggy, Flipkart & More</div>
           </div>
