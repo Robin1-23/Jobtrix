@@ -284,14 +284,16 @@ export function HeroSection() {
                   }}
                 >
                   <img
-                    src="/images/l1_hero_img_1.png"
+                    src="/images/worker_yellow_helmet.jpg"
                     alt="Verified frontline worker"
                     style={{
                       width: "100%",
                       height: "100%",
                       borderRadius: "50%",
                       objectFit: "cover",
+                      objectPosition: "center 15%",
                       display: "block",
+                      border: "3px solid #FFFFFF",
                       boxShadow: "0 14px 30px -8px rgba(16, 25, 46, 0.28)",
                     }}
                   />

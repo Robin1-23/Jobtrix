@@ -32,7 +32,7 @@ const testimonials = [
     quote: "Seedha WhatsApp par message kiya aur agle din verification ho gayi. Payout time par milta hai, koi middleman commission nahi.",
     name: "Vikram S.",
     location: "Gurgaon • Sector 29",
-    avatar: "/images/l1_hero_img_1.png",
+    avatar: "/images/worker_yellow_helmet.jpg",
   },
   {
     quote: "Hospitality shift timing flexible chahiye thi. Jobtrix bot ne nearby center me 2 din ke andar verified schedule fix karwa diya.",
