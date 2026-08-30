@@ -11,10 +11,15 @@ import { HowItWorksPage } from "./src/pages/HowItWorksPage";
 import { ContactPage } from "./src/pages/ContactPage";
 import { AdminPanelPage } from "./src/pages/AdminPanelPage";
 import { EmployerApplicationModal } from "./src/components/modals/EmployerApplicationModal";
+import { UniversalApplicationModal } from "./src/components/modals/UniversalApplicationModal";
 
 export default function JobtrixLanding() {
   const [isHireModalOpen, setIsHireModalOpen] = React.useState(false);
   const [hireModalPhone, setHireModalPhone] = React.useState("");
+
+  const [isUniversalModalOpen, setIsUniversalModalOpen] = React.useState(false);
+  const [universalModalMode, setUniversalModalMode] = React.useState("seeker");
+  const [universalModalPhone, setUniversalModalPhone] = React.useState("");
 
   React.useEffect(() => {
     const handleOpen = (e) => {
@@ -23,8 +28,26 @@ export default function JobtrixLanding() {
       }
       setIsHireModalOpen(true);
     };
+
+    const handleOpenUniversal = (e) => {
+      if (e?.detail?.mode) {
+        setUniversalModalMode(e.detail.mode);
+      } else {
+        setUniversalModalMode("seeker");
+      }
+      if (e?.detail?.phone) {
+        setUniversalModalPhone(e.detail.phone);
+      }
+      setIsUniversalModalOpen(true);
+    };
+
     window.addEventListener("open-hire-modal", handleOpen);
-    return () => window.removeEventListener("open-hire-modal", handleOpen);
+    window.addEventListener("open-universal-modal", handleOpenUniversal);
+
+    return () => {
+      window.removeEventListener("open-hire-modal", handleOpen);
+      window.removeEventListener("open-universal-modal", handleOpenUniversal);
+    };
   }, []);
   return (
     <BrowserRouter>
@@ -424,6 +447,17 @@ export default function JobtrixLanding() {
           onClose={() => {
             setIsHireModalOpen(false);
             setHireModalPhone("");
+          }}
+        />
+
+        {/* Global Dual Job Seeker & Employer Application Modal */}
+        <UniversalApplicationModal
+          isOpen={isUniversalModalOpen}
+          initialMode={universalModalMode}
+          initialPhone={universalModalPhone}
+          onClose={() => {
+            setIsUniversalModalOpen(false);
+            setUniversalModalPhone("");
           }}
         />
       </div>

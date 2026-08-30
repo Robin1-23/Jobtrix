@@ -6,7 +6,7 @@ export function MobileActionBar() {
     <div className="jx-mobile-action-bar">
       {/* 1. Call Desk Button */}
       <a
-        href="tel:9142252116"
+        href="tel:+919991239374"
         className="jx-mobile-action-btn"
         style={{
           flex: 1,
@@ -37,7 +37,7 @@ export function MobileActionBar() {
 
       {/* 2. WhatsApp Button */}
       <a
-        href="https://wa.me/919142252116?text=Hi%20Jobtrix%2C%20I%20am%20looking%20for%20a%20frontline%20job%20opportunity."
+        href="https://wa.me/919991239374?text=Hi%20Jobtrix,%20I%20want%20to%20apply%20for%20a%20job%20opportunity."
         target="_blank"
         rel="noopener noreferrer"
         className="jx-mobile-action-btn"
@@ -70,20 +70,22 @@ export function MobileActionBar() {
         </span>
       </a>
 
-      {/* 3. Apply Button */}
-      <a
-        href="#contact"
+      {/* 3. Apply Button (Opens Dual Job Seeker & Employer Modal) */}
+      <button
+        type="button"
+        onClick={() => window.dispatchEvent(new CustomEvent("open-universal-modal", { detail: { mode: "seeker" } }))}
         className="jx-mobile-action-btn"
         style={{
           flex: 1,
           height: 46,
           borderRadius: 14,
           background: "#4F46E5",
+          border: "none",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           gap: 6,
-          textDecoration: "none",
+          cursor: "pointer",
           color: "#FFFFFF",
         }}
       >
@@ -98,7 +100,7 @@ export function MobileActionBar() {
           Apply
         </span>
         <ArrowRight size={15} color="#FFFFFF" strokeWidth={2.6} />
-      </a>
+      </button>
     </div>
   );
 }
