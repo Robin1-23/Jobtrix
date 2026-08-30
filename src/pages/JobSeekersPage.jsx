@@ -33,12 +33,12 @@ export function JobSeekersPage() {
         <Reveal>
           <div className="jx-jobseeker-hero-stage">
             
-            {/* FLOATING WORKER: Top-Left (Orange Cap, Pizza boxes) */}
+            {/* FLOATING WORKER: Top-Left (Zomato Partner in Red Polo) */}
             <div className="jx-float-worker jx-worker-tl">
               <img
-                src="/images/worker_top_left.png"
-                alt="Delivery partner with pizza box"
-                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                src="/images/worker_zomato_hero.jpg"
+                alt="Zomato delivery partner in red polo"
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 20%", display: "block" }}
               />
             </div>
 
@@ -92,12 +92,12 @@ export function JobSeekersPage() {
               </div>
             </div>
 
-            {/* FLOATING WORKER: Bottom-Left (Helmet & parcel) */}
+            {/* FLOATING WORKER: Bottom-Left (Pronto Housekeeping Specialist) */}
             <div className="jx-float-worker jx-worker-bl">
               <img
-                src="/images/worker_bottom_left.png"
-                alt="Delivery partner with bike helmet"
-                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                src="/images/worker_pronto_maid.jpg"
+                alt="Pronto housekeeping and cleaning specialist"
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "68% center", display: "block" }}
               />
             </div>
 
@@ -196,12 +196,12 @@ export function JobSeekersPage() {
               </div>
             </div>
 
-            {/* FLOATING WORKER: Top-Right (Yellow t-shirt, backpack) */}
+            {/* FLOATING WORKER: Top-Right (Courier Partner with Parcel & Thumbs Up) */}
             <div className="jx-float-worker jx-worker-tr">
               <img
-                src="/images/worker_top_right.png"
-                alt="Delivery partner with backpack"
-                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                src="/images/worker_courier_delivery.jpg"
+                alt="Courier delivery partner with parcel"
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 22%", display: "block" }}
               />
             </div>
 
@@ -253,12 +253,12 @@ export function JobSeekersPage() {
               </div>
             </div>
 
-            {/* FLOATING WORKER: Bottom-Right (Red polo, black cap, carton box) */}
+            {/* FLOATING WORKER: Bottom-Right (Swiggy Delivery Partner with Bag) */}
             <div className="jx-float-worker jx-worker-br">
               <img
-                src="/images/worker_bottom_right.png"
-                alt="Delivery partner with box"
-                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                src="/images/worker_swiggy_hero.jpg"
+                alt="Swiggy delivery partner with orange bag"
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center", display: "block" }}
               />
             </div>
 
