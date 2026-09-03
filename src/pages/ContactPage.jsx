@@ -169,15 +169,12 @@ export function ContactPage() {
           <Reveal delay={60}>
             <a
               href="tel:+919991239374"
-              className="jx-hover-lift"
+              className="jx-neobrutal-card jx-neobrutal-card-interactive"
               style={{
                 display: "flex",
                 alignItems: "center",
                 gap: 16,
-                background: "#FFFFFF",
                 padding: "24px 22px",
-                borderRadius: 16,
-                border: "1px solid #E5E7EB",
                 textDecoration: "none",
                 color: "inherit",
               }}
@@ -187,23 +184,25 @@ export function ContactPage() {
                   width: 46,
                   height: 46,
                   borderRadius: 12,
-                  background: "rgba(22, 163, 74, 0.1)",
+                  border: "2px solid #10192E",
+                  background: "#DCFCE7",
+                  boxShadow: "2px 2px 0 0 #10192E",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   flexShrink: 0,
                 }}
               >
-                <Phone size={22} color="#16A34A" />
+                <Phone size={22} color="#10192E" />
               </div>
               <div>
-                <div style={{ fontSize: 12, color: "#64748B", fontWeight: 600, textTransform: "uppercase" }}>
+                <div style={{ fontSize: 12, color: "#64748B", fontWeight: 700, fontFamily: "'IBM Plex Mono', monospace", textTransform: "uppercase" }}>
                   Call Us
                 </div>
-                <div style={{ fontSize: 17, fontWeight: 700, color: "#10192E", marginTop: 2 }}>
+                <div style={{ fontSize: 17, fontWeight: 800, color: "#10192E", marginTop: 2, fontFamily: "'Space Grotesk', sans-serif" }}>
                   +91 99912 39374
                 </div>
-                <div style={{ fontSize: 12, color: "#16A34A", fontWeight: 600, marginTop: 2 }}>
+                <div style={{ fontSize: 12, color: "#16A34A", fontWeight: 700, marginTop: 2 }}>
                   Direct line to Robin Jain
                 </div>
               </div>
@@ -216,15 +215,12 @@ export function ContactPage() {
               href="https://wa.me/919991239374?text=Hi%20Jobtrix,%20I%20have%20an%20inquiry%20regarding%20workforce%20services"
               target="_blank"
               rel="noopener noreferrer"
-              className="jx-hover-lift"
+              className="jx-neobrutal-card jx-neobrutal-card-interactive"
               style={{
                 display: "flex",
                 alignItems: "center",
                 gap: 16,
-                background: "#FFFFFF",
                 padding: "24px 22px",
-                borderRadius: 16,
-                border: "1px solid #E5E7EB",
                 textDecoration: "none",
                 color: "inherit",
               }}
@@ -234,23 +230,25 @@ export function ContactPage() {
                   width: 46,
                   height: 46,
                   borderRadius: 12,
-                  background: "rgba(22, 163, 74, 0.1)",
+                  border: "2px solid #10192E",
+                  background: "#DCFCE7",
+                  boxShadow: "2px 2px 0 0 #10192E",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   flexShrink: 0,
                 }}
               >
-                <MessageCircle size={22} color="#16A34A" />
+                <MessageCircle size={22} color="#10192E" />
               </div>
               <div>
-                <div style={{ fontSize: 12, color: "#64748B", fontWeight: 600, textTransform: "uppercase" }}>
+                <div style={{ fontSize: 12, color: "#64748B", fontWeight: 700, fontFamily: "'IBM Plex Mono', monospace", textTransform: "uppercase" }}>
                   WhatsApp Chat
                 </div>
-                <div style={{ fontSize: 17, fontWeight: 700, color: "#10192E", marginTop: 2 }}>
+                <div style={{ fontSize: 17, fontWeight: 800, color: "#10192E", marginTop: 2, fontFamily: "'Space Grotesk', sans-serif" }}>
                   +91 99912 39374
                 </div>
-                <div style={{ fontSize: 12, color: "#16A34A", fontWeight: 600, marginTop: 2 }}>
+                <div style={{ fontSize: 12, color: "#16A34A", fontWeight: 700, marginTop: 2 }}>
                   Quick replies on WhatsApp
                 </div>
               </div>
@@ -261,15 +259,12 @@ export function ContactPage() {
           <Reveal delay={180}>
             <a
               href="mailto:robinjain142001@gmail.com"
-              className="jx-hover-lift"
+              className="jx-neobrutal-card jx-neobrutal-card-interactive"
               style={{
                 display: "flex",
                 alignItems: "center",
                 gap: 16,
-                background: "#FFFFFF",
                 padding: "24px 22px",
-                borderRadius: 16,
-                border: "1px solid #E5E7EB",
                 textDecoration: "none",
                 color: "inherit",
               }}
@@ -279,20 +274,22 @@ export function ContactPage() {
                   width: 46,
                   height: 46,
                   borderRadius: 12,
-                  background: "rgba(245, 158, 11, 0.12)",
+                  border: "2px solid #10192E",
+                  background: "#FEF3C7",
+                  boxShadow: "2px 2px 0 0 #10192E",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   flexShrink: 0,
                 }}
               >
-                <Mail size={22} color="#D97706" />
+                <Mail size={22} color="#10192E" />
               </div>
               <div>
-                <div style={{ fontSize: 12, color: "#64748B", fontWeight: 600, textTransform: "uppercase" }}>
+                <div style={{ fontSize: 12, color: "#64748B", fontWeight: 700, fontFamily: "'IBM Plex Mono', monospace", textTransform: "uppercase" }}>
                   Email Support
                 </div>
-                <div style={{ fontSize: 14.5, fontWeight: 700, color: "#10192E", marginTop: 2, wordBreak: "break-all" }}>
+                <div style={{ fontSize: 14.5, fontWeight: 800, color: "#10192E", marginTop: 2, fontFamily: "'Space Grotesk', sans-serif", wordBreak: "break-all" }}>
                   robinjain142001@gmail.com
                 </div>
                 <div style={{ fontSize: 12, color: "#64748B", marginTop: 2 }}>
@@ -388,13 +385,10 @@ export function ContactPage() {
 
           </div>
 
-          {/* RIGHT: Clean, Elegant Contact Form */}
+          {/* RIGHT: Retro Neobrutalist Contact Form Container */}
           <div
+            className="jx-retro-double-card"
             style={{
-              background: "#FFFFFF",
-              borderRadius: 20,
-              border: "1px solid #E5E7EB",
-              boxShadow: "0 10px 30px -10px rgba(0, 0, 0, 0.06)",
               padding: "36px 32px",
             }}
           >

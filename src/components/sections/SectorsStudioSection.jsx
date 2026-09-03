@@ -151,8 +151,8 @@ export function SectorsStudioSection() {
           />
         </div>
 
-        {/* Clean Interactive Sector Selector Pills */}
-        <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: 32 }}>
+        {/* Retro Neobrutalist Sector Selector Pills */}
+        <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 32 }}>
           {sectorProfiles.map((sec, idx) => {
             const active = activeSector === idx;
             const Icon = sec.IconComponent;
@@ -166,23 +166,24 @@ export function SectorsStudioSection() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: 9,
-                  padding: "10px 18px",
-                  borderRadius: 999,
+                  padding: "10px 20px",
+                  borderRadius: 12,
                   fontSize: 14,
-                  fontWeight: active ? 700 : 500,
-                  fontFamily: "'Inter', sans-serif",
-                  background: active ? TOKENS.navy : "#FFFFFF",
-                  color: active ? "#FFFFFF" : "#475569",
-                  border: active ? `1.5px solid ${TOKENS.navy}` : "1px solid #E2E8F0",
-                  boxShadow: active ? "0 4px 14px rgba(16, 25, 46, 0.15)" : "none",
+                  fontWeight: 800,
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  background: active ? "#FEF08A" : "#FFFFFF",
+                  color: "#10192E",
+                  border: "2px solid #10192E",
+                  boxShadow: active ? "3px 3px 0 0 #10192E" : "2px 2px 0 0 #10192E",
                   cursor: "pointer",
-                  transition: "all 0.15s ease",
+                  transition: "transform 0.15s ease, box-shadow 0.15s ease",
+                  transform: active ? "translate(1px, 1px)" : "none",
                 }}
               >
                 <Icon
-                  size={16}
-                  strokeWidth={2.2}
-                  color={active ? TOKENS.amber : "#64748B"}
+                  size={17}
+                  strokeWidth={2.4}
+                  color="#10192E"
                   className="jx-interactive-icon"
                 />
                 <span>{sec.shortName}</span>
@@ -191,16 +192,13 @@ export function SectorsStudioSection() {
           })}
         </div>
 
-        {/* Unified Spotlight Stage */}
+        {/* Unified Spotlight Stage (Retro Neobrutalist Double Shadow Window) */}
         {(() => {
           const current = sectorProfiles[activeSector];
           return (
             <div
+              className="jx-retro-double-card jx-hero jx-spotlight-stage"
               style={{
-                background: "#FFFFFF",
-                borderRadius: 22,
-                border: "1px solid #E2E8F0",
-                boxShadow: "0 18px 45px -15px rgba(16, 25, 46, 0.07), 0 2px 6px rgba(0, 0, 0, 0.02)",
                 overflow: "hidden",
                 display: "grid",
                 gridTemplateColumns: "1.15fr 0.95fr",
@@ -208,7 +206,6 @@ export function SectorsStudioSection() {
                 padding: "clamp(24px, 4vw, 44px) clamp(16px, 3.5vw, 40px)",
                 alignItems: "center",
               }}
-              className="jx-hero jx-spotlight-stage"
             >
               {/* Left Column: Operational Insight & Roles */}
               <div>
@@ -255,13 +252,15 @@ export function SectorsStudioSection() {
                       <span
                         key={i}
                         style={{
-                          background: "#F1F5F9",
-                          color: TOKENS.navy,
-                          fontSize: 13,
-                          fontWeight: 600,
+                          background: "#FFFFFF",
+                          color: "#10192E",
+                          fontSize: 12.5,
+                          fontWeight: 700,
                           padding: "6px 12px",
                           borderRadius: 8,
-                          border: "1px solid #E2E8F0",
+                          border: "1.5px solid #10192E",
+                          boxShadow: "1.5px 1.5px 0 0 #10192E",
+                          fontFamily: "'Space Grotesk', sans-serif",
                         }}
                       >
                         {r}
@@ -289,35 +288,21 @@ export function SectorsStudioSection() {
                   <button
                     type="button"
                     onClick={() => window.dispatchEvent(new CustomEvent("open-hire-modal"))}
-                    className="jx-btn"
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 8,
-                      background: TOKENS.navy,
-                      color: "#FFFFFF",
-                      padding: "12px 22px",
-                      borderRadius: 10,
-                      fontWeight: 700,
-                      fontSize: 14,
-                      border: "none",
-                      cursor: "pointer",
-                      boxShadow: "0 4px 14px rgba(16, 25, 46, 0.15)",
-                    }}
+                    className="jx-btn jx-btn-dark"
                   >
                     Deploy {current.shortName} team &rarr;
                   </button>
                 </div>
               </div>
 
-              {/* Right Column: Authentic WhatsApp Conversation Preview */}
+              {/* Right Column: Retro Phone Window */}
               <div
                 style={{
                   background: "#0E182A",
-                  borderRadius: 18,
+                  borderRadius: 16,
+                  border: "2.5px solid #10192E",
+                  boxShadow: "4px 4px 0 0 #10192E",
                   padding: "24px",
-                  boxShadow: "0 20px 40px -12px rgba(16, 25, 46, 0.25)",
-                  border: "1px solid rgba(255, 255, 255, 0.08)",
                 }}
               >
                 {/* WhatsApp Chat Header */}

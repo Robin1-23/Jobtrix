@@ -34,21 +34,7 @@ export function NotFoundPage() {
         
         {/* Top 404 Badge */}
         <Reveal>
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
-              background: "rgba(245, 158, 11, 0.12)",
-              border: "1px solid rgba(245, 158, 11, 0.3)",
-              borderRadius: 999,
-              padding: "5px 14px",
-              fontSize: 12.5,
-              fontWeight: 700,
-              color: "#B45309",
-              marginBottom: 16,
-            }}
-          >
+          <div className="jx-retro-badge jx-retro-badge-amber" style={{ marginBottom: 16 }}>
             <AlertCircle size={14} color="#D97706" />
             <span>ERROR 404 · PAGE NOT FOUND</span>
           </div>
@@ -113,19 +99,7 @@ export function NotFoundPage() {
           >
             <Link
               to="/"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                background: "#10192E",
-                color: "#FFFFFF",
-                padding: "13px 24px",
-                borderRadius: 12,
-                fontWeight: 700,
-                fontSize: 14.5,
-                textDecoration: "none",
-                boxShadow: "0 6px 18px rgba(16, 25, 46, 0.16)",
-              }}
+              className="jx-btn jx-btn-dark"
             >
               <Home size={17} />
               <span>Back to Home</span>
@@ -134,19 +108,7 @@ export function NotFoundPage() {
             <button
               type="button"
               onClick={() => navigate(-1)}
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                background: "#FFFFFF",
-                color: "#374151",
-                border: "1px solid #D1D5DB",
-                padding: "13px 20px",
-                borderRadius: 12,
-                fontWeight: 700,
-                fontSize: 14.5,
-                cursor: "pointer",
-              }}
+              className="jx-btn jx-btn-white"
             >
               <ArrowLeft size={17} />
               <span>Go Back</span>
@@ -157,13 +119,10 @@ export function NotFoundPage() {
         {/* Helpful Navigation Cards */}
         <Reveal delay={200}>
           <div
+            className="jx-neobrutal-card"
             style={{
-              background: "#FFFFFF",
-              borderRadius: 20,
-              border: "1px solid #E5E7EB",
               padding: "24px 22px",
               textAlign: "left",
-              boxShadow: "0 4px 16px rgba(0, 0, 0, 0.04)",
             }}
           >
             <div

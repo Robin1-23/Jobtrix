@@ -129,51 +129,31 @@ export function TestimonialsCarousel() {
             type="button"
             onClick={handlePrev}
             aria-label="Previous direction"
-            className="jx-btn"
+            className="jx-btn jx-btn-dark jx-btn-sm"
             title="Glide left"
             style={{
               width: 44,
               height: 44,
-              borderRadius: "50%",
-              background: direction === "reverse" ? TOKENS.navy : "#718096",
-              color: "#FFFFFF",
-              border: "none",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              cursor: "pointer",
-              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
-              transition: "all 0.15s ease",
+              padding: 0,
+              borderRadius: 12,
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = TOKENS.navy)}
-            onMouseLeave={(e) => (e.currentTarget.style.background = direction === "reverse" ? TOKENS.navy : "#718096")}
           >
-            <ChevronLeft size={22} strokeWidth={2.4} />
+            <ChevronLeft size={20} strokeWidth={2.4} />
           </button>
           <button
             type="button"
             onClick={handleNext}
             aria-label="Next direction"
-            className="jx-btn"
+            className="jx-btn jx-btn-dark jx-btn-sm"
             title="Glide right"
             style={{
               width: 44,
               height: 44,
-              borderRadius: "50%",
-              background: direction === "normal" ? TOKENS.navy : "#718096",
-              color: "#FFFFFF",
-              border: "none",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              cursor: "pointer",
-              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
-              transition: "all 0.15s ease",
+              padding: 0,
+              borderRadius: 12,
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = TOKENS.navy)}
-            onMouseLeave={(e) => (e.currentTarget.style.background = direction === "normal" ? TOKENS.navy : "#718096")}
           >
-            <ChevronRight size={22} strokeWidth={2.4} />
+            <ChevronRight size={20} strokeWidth={2.4} />
           </button>
         </div>
       </div>
@@ -219,34 +199,41 @@ export function TestimonialsCarousel() {
           {loop.map((t, i) => (
             <div
               key={i}
-              className="jx-testimonial-card"
+              className="jx-neobrutal-card jx-neobrutal-card-interactive"
               style={{
                 flex: "0 0 320px",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
-                background: "#FFFFFF",
-                borderRadius: 20,
-                border: "1px solid rgba(0, 0, 0, 0.06)",
                 padding: "24px 22px",
-                boxShadow: "0 8px 24px -6px rgba(16, 25, 46, 0.06)",
-                cursor: "pointer",
               }}
             >
               <div>
-                {/* Golden Double Quote Icon Matching Screenshot */}
-                <div
-                  style={{
-                    color: "#EAA61E",
-                    fontSize: 40,
-                    fontFamily: "Georgia, serif",
-                    lineHeight: 1,
-                    marginBottom: 12,
-                    fontWeight: 700,
-                    userSelect: "none",
-                  }}
-                >
-                  &#8221;&#8221;
+                {/* Retro Quotation Badge */}
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
+                  <div
+                    style={{
+                      width: 34,
+                      height: 34,
+                      borderRadius: 10,
+                      border: "2px solid #10192E",
+                      background: "#FEF3C7",
+                      boxShadow: "2px 2px 0 0 #10192E",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      color: "#10192E",
+                      fontSize: 22,
+                      fontFamily: "Georgia, serif",
+                      fontWeight: 800,
+                      lineHeight: 1,
+                    }}
+                  >
+                    &#8220;
+                  </div>
+                  <span className="jx-retro-badge jx-retro-badge-amber">
+                    VERIFIED RIDER
+                  </span>
                 </div>
 
                 {/* Quote Text */}

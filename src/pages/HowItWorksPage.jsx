@@ -188,14 +188,14 @@ export function HowItWorksPage() {
             </p>
           </Reveal>
 
-          {/* Simple Audience Switcher */}
+          {/* Retro Neobrutalist Audience Switcher */}
           <Reveal delay={150}>
             <div
               style={{
                 display: "inline-flex",
-                background: "#F3F4F6",
-                padding: "4px",
-                borderRadius: 12,
+                gap: 10,
+                flexWrap: "wrap",
+                justifyContent: "center",
                 marginBottom: 12,
               }}
             >
@@ -206,14 +206,16 @@ export function HowItWorksPage() {
                   alignItems: "center",
                   gap: 8,
                   padding: "10px 22px",
-                  borderRadius: 9,
-                  border: "none",
-                  background: activeAudience === "employer" ? "#10192E" : "transparent",
-                  color: activeAudience === "employer" ? "#FFFFFF" : "#4B5563",
-                  fontWeight: 700,
+                  borderRadius: 10,
+                  border: "2px solid #10192E",
+                  background: activeAudience === "employer" ? "#FEF08A" : "#FFFFFF",
+                  color: "#10192E",
+                  boxShadow: activeAudience === "employer" ? "3px 3px 0 0 #10192E" : "2px 2px 0 0 #10192E",
+                  fontWeight: 800,
                   fontSize: 13.5,
+                  fontFamily: "'Space Grotesk', sans-serif",
                   cursor: "pointer",
-                  transition: "all 0.15s ease",
+                  transform: activeAudience === "employer" ? "translate(1px, 1px)" : "none",
                 }}
               >
                 <Briefcase size={16} />
@@ -227,14 +229,16 @@ export function HowItWorksPage() {
                   alignItems: "center",
                   gap: 8,
                   padding: "10px 22px",
-                  borderRadius: 9,
-                  border: "none",
-                  background: activeAudience === "seeker" ? "#10192E" : "transparent",
-                  color: activeAudience === "seeker" ? "#FFFFFF" : "#4B5563",
-                  fontWeight: 700,
+                  borderRadius: 10,
+                  border: "2px solid #10192E",
+                  background: activeAudience === "seeker" ? "#FEF08A" : "#FFFFFF",
+                  color: "#10192E",
+                  boxShadow: activeAudience === "seeker" ? "3px 3px 0 0 #10192E" : "2px 2px 0 0 #10192E",
+                  fontWeight: 800,
                   fontSize: 13.5,
+                  fontFamily: "'Space Grotesk', sans-serif",
                   cursor: "pointer",
-                  transition: "all 0.15s ease",
+                  transform: activeAudience === "seeker" ? "translate(1px, 1px)" : "none",
                 }}
               >
                 <Users size={16} />
@@ -285,12 +289,9 @@ export function HowItWorksPage() {
             {currentSteps.map((item, idx) => (
               <Reveal key={item.step} delay={idx * 80}>
                 <div
-                  className="jx-hover-lift"
+                  className="jx-neobrutal-card jx-neobrutal-card-interactive"
                   style={{
-                    background: "#FFFFFF",
-                    borderRadius: 18,
-                    padding: "30px 24px",
-                    border: "1px solid #E5E7EB",
+                    padding: "28px 24px",
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-between",
@@ -306,7 +307,9 @@ export function HowItWorksPage() {
                           width: 44,
                           height: 44,
                           borderRadius: 12,
-                          background: "#F3F4F6",
+                          border: "2px solid #10192E",
+                          background: "#FFFFFF",
+                          boxShadow: "2px 2px 0 0 #10192E",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
@@ -360,13 +363,15 @@ export function HowItWorksPage() {
                   {/* Bottom Metric */}
                   <div
                     style={{
-                      background: "#F9FAFB",
+                      background: "#FFFFFF",
                       borderRadius: 8,
+                      border: "1.5px solid #10192E",
+                      boxShadow: "1.5px 1.5px 0 0 #10192E",
                       padding: "7px 12px",
                       fontSize: 12,
-                      fontWeight: 600,
-                      color: "#4B5563",
-                      border: "1px solid #F3F4F6",
+                      fontWeight: 700,
+                      color: "#10192E",
+                      fontFamily: "'Space Grotesk', sans-serif",
                       display: "flex",
                       alignItems: "center",
                       gap: 6,
@@ -545,13 +550,10 @@ export function HowItWorksPage() {
                 <Reveal key={fIdx} delay={fIdx * 40}>
                   <div
                     onClick={() => setOpenFaq(isOpen ? -1 : fIdx)}
+                    className="jx-neobrutal-card jx-neobrutal-card-interactive"
                     style={{
-                      background: "#FFFFFF",
-                      borderRadius: 14,
-                      border: isOpen ? "1px solid #10192E" : "1px solid #E5E7EB",
                       padding: "18px 22px",
-                      cursor: "pointer",
-                      transition: "all 0.15s ease",
+                      background: isOpen ? "#FEFDF8" : "#FFFFFF",
                     }}
                   >
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16 }}>

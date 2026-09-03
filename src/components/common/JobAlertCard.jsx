@@ -144,9 +144,10 @@ export function JobAlertCard() {
     <div
       style={{
         background: "#EAA61E",
-        borderRadius: 32,
-        padding: "clamp(36px, 5vw, 64px) clamp(20px, 4vw, 54px)",
-        boxShadow: "0 22px 50px -14px rgba(234, 166, 30, 0.45)",
+        border: "3px solid #10192E",
+        borderRadius: 20,
+        boxShadow: "6px 6px 0 0 #10192E",
+        padding: "clamp(36px, 5vw, 60px) clamp(20px, 4vw, 54px)",
         position: "relative",
         overflow: "hidden",
         margin: "0 auto",
@@ -187,12 +188,13 @@ export function JobAlertCard() {
           <div
             style={{
               background: "#FFFFFF",
-              borderRadius: 999,
+              border: "2px solid #10192E",
+              borderRadius: 12,
+              boxShadow: "3px 3px 0 0 #10192E",
               padding: "16px 28px",
               display: "inline-flex",
               alignItems: "center",
               gap: 12,
-              boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
             }}
           >
             <CheckCircle2 size={22} color="#16A34A" strokeWidth={2.4} />
@@ -307,13 +309,13 @@ export function JobAlertCard() {
                 <div
                   style={{
                     background: "#FFFFFF",
-                    borderRadius: 999,
-                    height: 54,
-                    padding: "0 20px",
+                    border: errors.phone && touched.phone ? "2px solid #DC2626" : "2px solid #10192E",
+                    borderRadius: 12,
+                    boxShadow: "2.5px 2.5px 0 0 #10192E",
+                    height: 52,
+                    padding: "0 18px",
                     display: "flex",
                     alignItems: "center",
-                    boxShadow: "0 4px 14px rgba(0, 0, 0, 0.06)",
-                    border: errors.phone && touched.phone ? "2px solid #DC2626" : "2px solid transparent",
                     transition: "border 0.2s ease",
                   }}
                 >

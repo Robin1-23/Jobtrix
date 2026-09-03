@@ -367,12 +367,13 @@ export function HiringCompaniesSection() {
             style={{
               background: "#1D4ED8",
               color: "#FFFFFF",
-              borderRadius: 8,
+              borderRadius: 10,
+              border: "2px solid #10192E",
               padding: "10px 28px",
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Space Grotesk', sans-serif",
               fontSize: "clamp(13px, 1.1vw, 15px)",
-              fontWeight: 600,
-              boxShadow: "0 4px 14px rgba(29, 78, 216, 0.3)",
+              fontWeight: 700,
+              boxShadow: "3px 3px 0 0 #10192E",
               textAlign: "center",
               maxWidth: 620,
               width: "90%",
@@ -382,15 +383,12 @@ export function HiringCompaniesSection() {
           </div>
         </div>
 
-        {/* 2. FILTER BAR CARD (MATCHING USER SCREENSHOT) */}
+        {/* 2. FILTER BAR CARD (RETRO NEOBRUTALIST) */}
         <div
+          className="jx-neobrutal-card"
           style={{
-            background: "#FFFFFF",
-            border: "1px solid #E2E8F0",
-            borderRadius: 24,
             padding: "30px 28px 24px",
             marginBottom: 36,
-            boxShadow: "0 6px 20px rgba(0, 0, 0, 0.03)",
           }}
         >
           <div
@@ -425,13 +423,14 @@ export function HiringCompaniesSection() {
                   width: "100%",
                   appearance: "none",
                   background: "#FFFFFF",
-                  border: "1px solid #E2E8F0",
-                  borderRadius: 999,
-                  padding: "10px 36px 10px 18px",
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: 14,
-                  color: selectedCity === "All" ? "#64748B" : "#0F172A",
-                  fontWeight: 500,
+                  border: "2px solid #10192E",
+                  borderRadius: 10,
+                  boxShadow: "2px 2px 0 0 #10192E",
+                  padding: "10px 36px 10px 16px",
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontSize: 13.5,
+                  color: "#10192E",
+                  fontWeight: 600,
                   outline: "none",
                   cursor: "pointer",
                 }}
@@ -457,13 +456,14 @@ export function HiringCompaniesSection() {
                   width: "100%",
                   appearance: "none",
                   background: "#FFFFFF",
-                  border: "1px solid #E2E8F0",
-                  borderRadius: 999,
-                  padding: "10px 36px 10px 18px",
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: 14,
-                  color: selectedNeighbourhood === "All" ? "#64748B" : "#0F172A",
-                  fontWeight: 500,
+                  border: "2px solid #10192E",
+                  borderRadius: 10,
+                  boxShadow: "2px 2px 0 0 #10192E",
+                  padding: "10px 36px 10px 16px",
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontSize: 13.5,
+                  color: "#10192E",
+                  fontWeight: 600,
                   outline: "none",
                   cursor: "pointer",
                 }}
@@ -489,13 +489,14 @@ export function HiringCompaniesSection() {
                   width: "100%",
                   appearance: "none",
                   background: "#FFFFFF",
-                  border: "1px solid #E2E8F0",
-                  borderRadius: 999,
-                  padding: "10px 36px 10px 18px",
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: 14,
-                  color: selectedCompany === "All" ? "#64748B" : "#0F172A",
-                  fontWeight: 500,
+                  border: "2px solid #10192E",
+                  borderRadius: 10,
+                  boxShadow: "2px 2px 0 0 #10192E",
+                  padding: "10px 36px 10px 16px",
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontSize: 13.5,
+                  color: "#10192E",
+                  fontWeight: 600,
                   outline: "none",
                   cursor: "pointer",
                 }}
@@ -547,25 +548,12 @@ export function HiringCompaniesSection() {
           {filteredJobs.map((job) => (
             <div
               key={job.id}
-              className="jx-job-card"
+              className="jx-neobrutal-card jx-neobrutal-card-interactive"
               style={{
-                background: "#FFFFFF",
-                border: "1px solid #E8EEF5",
-                borderRadius: 20,
                 padding: "24px 22px 20px",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
-                boxShadow: "0 4px 18px -4px rgba(16, 25, 46, 0.05)",
-                transition: "transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-4px)";
-                e.currentTarget.style.boxShadow = "0 14px 30px -6px rgba(16, 25, 46, 0.12)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow = "0 4px 18px -4px rgba(16, 25, 46, 0.05)";
               }}
             >
               <div>
@@ -603,12 +591,13 @@ export function HiringCompaniesSection() {
                     </div>
                   </div>
 
-                  {/* Brand App Icon Badge Matching Screenshot */}
+                  {/* Brand App Icon Badge (Retro Neobrutal Box) */}
                   <div
                     style={{
                       width: 44,
                       height: 44,
                       borderRadius: 12,
+                      border: "2px solid #10192E",
                       background: job.brandColor,
                       color: job.textColor || "#FFFFFF",
                       display: "flex",
@@ -618,7 +607,7 @@ export function HiringCompaniesSection() {
                       fontSize: 12.5,
                       fontFamily: "'Space Grotesk', sans-serif",
                       flexShrink: 0,
-                      boxShadow: "0 3px 10px rgba(0,0,0,0.12)",
+                      boxShadow: "2px 2px 0 0 #10192E",
                       letterSpacing: "-0.02em",
                       textTransform: "lowercase",
                     }}
@@ -667,8 +656,8 @@ export function HiringCompaniesSection() {
               <div>
                 <div
                   style={{
-                    height: 1,
-                    background: "#F1F5F9",
+                    height: 2,
+                    background: "#10192E",
                     margin: "0 -22px 14px",
                   }}
                 />
@@ -684,18 +673,17 @@ export function HiringCompaniesSection() {
                     type="button"
                     onClick={() => setActiveModalJob(job)}
                     style={{
-                      background: "transparent",
-                      border: "none",
-                      color: "#EAA61E",
-                      fontSize: 13.5,
-                      fontWeight: 600,
+                      background: "#FFFFFF",
+                      border: "1.5px solid #10192E",
+                      borderRadius: 8,
+                      boxShadow: "1.5px 1.5px 0 0 #10192E",
+                      color: "#10192E",
+                      fontSize: 12.5,
+                      fontWeight: 700,
                       cursor: "pointer",
-                      padding: 0,
-                      fontFamily: "'Inter', sans-serif",
-                      textDecoration: "none",
+                      padding: "5px 12px",
+                      fontFamily: "'Space Grotesk', sans-serif",
                     }}
-                    onMouseEnter={(e) => (e.currentTarget.style.textDecoration = "underline")}
-                    onMouseLeave={(e) => (e.currentTarget.style.textDecoration = "none")}
                   >
                     Know More
                   </button>
@@ -738,11 +726,12 @@ export function HiringCompaniesSection() {
           <div
             style={{
               background: "#FFFFFF",
-              borderRadius: 24,
+              borderRadius: 16,
+              border: "3px solid #10192E",
+              boxShadow: "8px 8px 0 0 #10192E",
               maxWidth: 480,
               width: "100%",
               padding: "28px 24px",
-              boxShadow: "0 25px 60px -15px rgba(0, 0, 0, 0.3)",
               position: "relative",
             }}
             onClick={(e) => e.stopPropagation()}

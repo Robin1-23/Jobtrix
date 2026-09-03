@@ -140,22 +140,11 @@ export function JobSeekersPage() {
                 <button
                   type="button"
                   onClick={() => setIsApplyModalOpen(true)}
-                  className="jx-btn"
+                  className="jx-btn jx-btn-purple"
                   style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 10,
-                    background: "#581C87",
-                    color: "#FFFFFF",
                     padding: "14px 28px",
-                    borderRadius: 999,
-                    fontWeight: 700,
                     fontSize: 13.5,
-                    border: "none",
-                    cursor: "pointer",
                     letterSpacing: "0.06em",
-                    boxShadow: "0 10px 25px -4px rgba(88, 28, 135, 0.45)",
-                    fontFamily: "'Space Grotesk', sans-serif",
                   }}
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFFFFF">
@@ -344,13 +333,9 @@ export function JobSeekersPage() {
             ].map((c, i) => (
               <div
                 key={i}
-                className="jx-worker-card"
+                className="jx-neobrutal-card jx-neobrutal-card-interactive"
                 style={{
-                  background: "#FFFFFF",
-                  border: "1px solid #E2E8F0",
-                  borderRadius: 20,
                   padding: "26px 24px",
-                  boxShadow: "0 4px 14px -4px rgba(16, 25, 46, 0.04)",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
@@ -416,21 +401,13 @@ export function JobSeekersPage() {
             href="https://wa.me/919991239374?text=Hi%20Jobtrix,%20I%20want%20to%20refer%20a%20friend%20for%20a%20job%20and%20earn%20the%20%E2%82%B93%2C000%20bonus."
             target="_blank"
             rel="noopener noreferrer"
+            className="jx-neobrutal-card jx-neobrutal-card-interactive"
             style={{
               display: "block",
               textDecoration: "none",
-              borderRadius: 22,
+              borderRadius: 18,
               overflow: "hidden",
-              boxShadow: "0 14px 34px -8px rgba(16, 185, 129, 0.28), 0 2px 8px rgba(0, 0, 0, 0.04)",
-              transition: "transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-4px)";
-              e.currentTarget.style.boxShadow = "0 22px 48px -10px rgba(16, 185, 129, 0.38)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow = "0 14px 34px -8px rgba(16, 185, 129, 0.28), 0 2px 8px rgba(0, 0, 0, 0.04)";
+              padding: 0,
             }}
           >
             <img
@@ -517,8 +494,8 @@ export function JobSeekersPage() {
           />
         </Reveal>
 
-        {/* 4 Step Cards Matching High-End Aesthetic */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 20 }}>
+        {/* 4 Step Cards (Retro Neobrutalist Triple Shadow) */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 28 }}>
           {[
             {
               step: "STEP 01",
@@ -526,11 +503,8 @@ export function JobSeekersPage() {
               title: "Send a Quick Hi",
               desc: "Message our WhatsApp bot in Hindi, English, or your local language. No resume or app download required.",
               icon: MessageSquare,
-              accent: "#7C3AED",
-              iconBg: "#7C3AED",
-              cardBg: "linear-gradient(180deg, #FFFFFF 0%, #FAF8FF 100%)",
-              border: "#E9D5FF",
-              hoverShadow: "0 20px 40px -12px rgba(124, 58, 237, 0.18)",
+              hoverClass: "jx-triple-purple",
+              tagBg: "#F3E8FF",
             },
             {
               step: "STEP 02",
@@ -538,11 +512,8 @@ export function JobSeekersPage() {
               title: "Answer 4 Questions",
               desc: "Share your vehicle details, driving license, preferred work hours, and location PIN code in under 60 seconds.",
               icon: UserCheck,
-              accent: "#06B6D4",
-              iconBg: "#06B6D4",
-              cardBg: "linear-gradient(180deg, #FFFFFF 0%, #F0FDFA 100%)",
-              border: "#A5F3FC",
-              hoverShadow: "0 20px 40px -12px rgba(6, 182, 212, 0.18)",
+              hoverClass: "jx-triple-sky",
+              tagBg: "#E0F2FE",
             },
             {
               step: "STEP 03",
@@ -550,11 +521,8 @@ export function JobSeekersPage() {
               title: "Get Instant Matches",
               desc: "Receive 3+ verified openings from top companies (Zomato, Blinkit, Flipkart) within 5 km of your home.",
               icon: Target,
-              accent: "#4F46E5",
-              iconBg: "#4F46E5",
-              cardBg: "linear-gradient(180deg, #FFFFFF 0%, #EEF2FF 100%)",
-              border: "#C7D2FE",
-              hoverShadow: "0 20px 40px -12px rgba(79, 70, 229, 0.18)",
+              hoverClass: "jx-triple-indigo",
+              tagBg: "#EEF2FF",
             },
             {
               step: "STEP 04",
@@ -562,109 +530,116 @@ export function JobSeekersPage() {
               title: "Start Shift & Payout",
               desc: "Complete swift digital onboarding, receive your digital ID badge, and start earning with weekly or daily payouts.",
               icon: CheckCircle2,
-              accent: "#10B981",
-              iconBg: "#10B981",
-              cardBg: "linear-gradient(180deg, #FFFFFF 0%, #F0FDF4 100%)",
-              border: "#BBF7D0",
-              hoverShadow: "0 20px 40px -12px rgba(16, 185, 129, 0.18)",
+              hoverClass: "jx-triple-green",
+              tagBg: "#D1FAE5",
             },
-          ].map((s, i) => (
-            <Reveal key={i} delay={i * 90}>
-              <div
-                className="jx-step-card"
-                style={{
-                  background: s.cardBg,
-                  border: `1.5px solid ${s.border}`,
-                  borderRadius: 22,
-                  padding: "26px 22px 20px",
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                  boxShadow: "0 4px 16px -4px rgba(16, 25, 46, 0.04)",
-                  cursor: "pointer",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = s.hoverShadow;
-                  e.currentTarget.style.borderColor = s.accent;
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = "0 4px 16px -4px rgba(16, 25, 46, 0.04)";
-                  e.currentTarget.style.borderColor = s.border;
-                }}
-              >
-                <div>
-                  {/* Top Row: Solid Colored Square Icon + Monospace Step Tag */}
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
-                    <div
-                      style={{
-                        width: 38,
-                        height: 38,
-                        borderRadius: 10,
-                        background: s.iconBg,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        boxShadow: `0 4px 12px ${s.accent}40`,
-                      }}
-                    >
-                      <s.icon size={18} color="#FFFFFF" strokeWidth={2.4} />
-                    </div>
-                    <span
-                      style={{
-                        fontFamily: "'IBM Plex Mono', monospace",
-                        fontSize: 11,
-                        fontWeight: 700,
-                        color: "#94A3B8",
-                        letterSpacing: "0.06em",
-                      }}
-                    >
-                      {s.step}
-                    </span>
-                  </div>
-
-                  {/* Title */}
-                  <h3
-                    style={{
-                      fontFamily: "'Space Grotesk', sans-serif",
-                      fontSize: 18,
-                      fontWeight: 700,
-                      color: TOKENS.navy,
-                      margin: "0 0 10px",
-                      lineHeight: 1.3,
-                      letterSpacing: "-0.01em",
-                    }}
-                  >
-                    {s.title}
-                  </h3>
-
-                  {/* Body */}
-                  <p style={{ color: "#5B657A", fontSize: 13.5, lineHeight: 1.6, margin: "0 0 20px" }}>
-                    {s.desc}
-                  </p>
-                </div>
-
-                {/* Bottom Phase Link */}
-                <div
-                  style={{
-                    paddingTop: 14,
-                    borderTop: "1px solid rgba(0, 0, 0, 0.06)",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 6,
-                    color: s.accent,
-                    fontFamily: "'IBM Plex Mono', monospace",
-                    fontSize: 11.5,
-                    fontWeight: 700,
-                    letterSpacing: "0.04em",
+          ].map((s, i) => {
+            const Icon = s.icon;
+            return (
+              <Reveal key={i} delay={i * 90}>
+                <article
+                  className={`jx-triple-shadow-card ${s.hoverClass}`}
+                  onClick={() => setIsApplyModalOpen(true)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      setIsApplyModalOpen(true);
+                    }
                   }}
                 >
-                  <span>{s.phase}</span>
-                  <span style={{ fontSize: 13 }}>&rarr;</span>
-                </div>
-              </div>
-            </Reveal>
-          ))}
+                  <div>
+                    {/* Top Meta Bar */}
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 20 }}>
+                      <div
+                        style={{
+                          width: 44,
+                          height: 44,
+                          borderRadius: 12,
+                          border: "2px solid #10192E",
+                          background: "#FFFFFF",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          boxShadow: "2px 2px 0 0 #10192E",
+                        }}
+                      >
+                        <Icon size={20} color="#10192E" strokeWidth={2.4} />
+                      </div>
+
+                      <span
+                        style={{
+                          fontFamily: "'IBM Plex Mono', monospace",
+                          fontSize: 11,
+                          fontWeight: 800,
+                          color: "#10192E",
+                          background: s.tagBg,
+                          border: "1.5px solid #10192E",
+                          padding: "4px 10px",
+                          borderRadius: 8,
+                          letterSpacing: "0.06em",
+                          textTransform: "uppercase",
+                          boxShadow: "1.5px 1.5px 0 0 #10192E",
+                        }}
+                      >
+                        {s.step}
+                      </span>
+                    </div>
+
+                    {/* Title */}
+                    <h3
+                      style={{
+                        fontFamily: "'Space Grotesk', sans-serif",
+                        fontSize: "clamp(19px, 2.2vw, 21px)",
+                        fontWeight: 800,
+                        color: "#10192E",
+                        margin: "0 0 12px",
+                        lineHeight: 1.3,
+                        letterSpacing: "-0.015em",
+                      }}
+                    >
+                      {s.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p
+                      style={{
+                        color: "#334155",
+                        fontSize: 14,
+                        lineHeight: 1.6,
+                        margin: 0,
+                      }}
+                    >
+                      {s.desc}
+                    </p>
+                  </div>
+
+                  {/* Bottom Phase Row */}
+                  <div
+                    style={{
+                      marginTop: 24,
+                      paddingTop: 16,
+                      borderTop: "2px solid #10192E",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      fontFamily: "'IBM Plex Mono', monospace",
+                      fontSize: 12,
+                      fontWeight: 800,
+                      color: "#10192E",
+                      letterSpacing: "0.04em",
+                    }}
+                  >
+                    <span>{s.phase}</span>
+                    <div style={{ display: "inline-flex", alignItems: "center", gap: 3 }}>
+                      <span>DETAILS</span>
+                      <ArrowRight size={13} strokeWidth={2.8} />
+                    </div>
+                  </div>
+                </article>
+              </Reveal>
+            );
+          })}
         </div>
       </Section>
 
