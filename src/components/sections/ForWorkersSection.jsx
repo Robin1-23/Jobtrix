@@ -133,21 +133,11 @@ export function ForWorkersSection() {
                 href="https://wa.me/919991239374?text=Hi%20Jobtrix,%20I%20am%20looking%20for%20a%20delivery%20job%20opportunity."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="jx-btn"
+                className="jx-btn jx-btn-purple"
                 style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 9,
-                  background: "#581C87",
-                  color: "#FFFFFF",
-                  padding: "13px 26px",
-                  borderRadius: 999,
-                  fontWeight: 700,
-                  fontSize: 13,
-                  letterSpacing: "0.06em",
-                  textDecoration: "none",
-                  boxShadow: "0 10px 25px -4px rgba(88, 28, 135, 0.45)",
-                  fontFamily: "'Space Grotesk', sans-serif",
+                  padding: "13px 28px",
+                  fontSize: 13.5,
+                  letterSpacing: "0.05em",
                 }}
               >
                 {/* WhatsApp Chat Bubble Icon */}

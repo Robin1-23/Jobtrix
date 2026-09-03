@@ -116,19 +116,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => window.dispatchEvent(new CustomEvent("open-hire-modal"))}
-            className="jx-btn jx-nav-cta"
-            style={{
-              background: "linear-gradient(90deg, #581C87 0%, #7C3AED 100%)",
-              color: "#fff",
-              border: "none",
-              padding: "10px 22px",
-              borderRadius: 999,
-              fontSize: 13.5,
-              fontWeight: 700,
-              cursor: "pointer",
-              boxShadow: "0 6px 18px rgba(124, 58, 237, 0.35)",
-              fontFamily: "'Space Grotesk', sans-serif",
-            }}
+            className="jx-btn jx-btn-primary jx-btn-sm"
           >
             Hire workforce &rarr;
           </button>
@@ -193,20 +181,11 @@ export function Navbar() {
             closeMobileNav();
             window.dispatchEvent(new CustomEvent("open-hire-modal"));
           }}
+          className="jx-btn jx-btn-primary"
           style={{
-            display: "block",
+            display: "flex",
             width: "100%",
-            textAlign: "center",
-            background: "linear-gradient(90deg, #581C87 0%, #7C3AED 100%)",
-            color: "#FFFFFF",
-            padding: "13px 0",
-            borderRadius: 10,
-            fontSize: 15,
-            fontWeight: 700,
-            border: "none",
-            marginTop: 8,
-            cursor: "pointer",
-            fontFamily: "'Space Grotesk', sans-serif",
+            marginTop: 10,
           }}
         >
           Hire workforce &rarr;

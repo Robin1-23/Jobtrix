@@ -107,38 +107,20 @@ export function HeroSection() {
             <button
               type="button"
               onClick={() => window.dispatchEvent(new CustomEvent("open-hire-modal"))}
-              className="jx-btn"
+              className="jx-btn jx-btn-primary"
               style={{
-                background: TOKENS.amber,
-                color: TOKENS.navy,
-                padding: "15px 28px",
-                borderRadius: 12,
-                fontWeight: 700,
-                fontSize: 15,
-                border: "none",
-                cursor: "pointer",
-                boxShadow: "0 8px 24px -4px rgba(255, 176, 32, 0.45)",
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                fontFamily: "'Space Grotesk', sans-serif",
+                padding: "14px 28px",
+                fontSize: 15.5,
               }}
             >
               Hire with Jobtrix &rarr;
             </button>
             <Link
               to="/job-seekers"
-              className="jx-btn"
+              className="jx-btn jx-btn-white"
               style={{
-                background: "transparent",
-                color: TOKENS.navy,
-                padding: "14px 24px",
-                borderRadius: 12,
-                fontWeight: 600,
-                fontSize: 15,
-                border: `1.5px solid ${TOKENS.line}`,
-                textDecoration: "none",
-                display: "inline-block",
+                padding: "14px 26px",
+                fontSize: 15.5,
               }}
             >
               I&apos;m looking for work

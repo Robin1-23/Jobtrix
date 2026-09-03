@@ -184,18 +184,10 @@ export function FooterSection() {
                 </div>
                 <button
                   type="submit"
-                  className="jx-btn"
+                  className="jx-btn jx-btn-primary"
                   style={{
-                    background: "#EAA61E",
-                    color: "#FFFFFF",
-                    border: "none",
-                    padding: "15px 32px",
-                    borderRadius: 10,
-                    fontWeight: 700,
+                    padding: "14px 32px",
                     fontSize: 15,
-                    cursor: "pointer",
-                    boxShadow: "0 6px 20px rgba(0, 0, 0, 0.2)",
-                    fontFamily: "'Inter', sans-serif",
                   }}
                 >
                   Contact Me

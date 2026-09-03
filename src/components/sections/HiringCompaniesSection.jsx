@@ -700,37 +700,13 @@ export function HiringCompaniesSection() {
                     Know More
                   </button>
 
-                  {/* APPLY NOW Purple Pill Button Matching User Screenshot */}
+                  {/* APPLY NOW Button */}
                   <button
                     type="button"
                     onClick={() => setQuickApplyJob(job)}
-                    className="jx-btn"
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 7,
-                      border: "1.5px solid #581C87",
-                      background: "#FFFFFF",
-                      color: "#581C87",
-                      borderRadius: 999,
-                      padding: "6px 16px",
-                      fontSize: 12.5,
-                      fontWeight: 700,
-                      letterSpacing: "0.03em",
-                      cursor: "pointer",
-                      transition: "all 0.15s ease",
-                      fontFamily: "'Space Grotesk', sans-serif",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.background = "#581C87";
-                      e.currentTarget.style.color = "#FFFFFF";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.background = "#FFFFFF";
-                      e.currentTarget.style.color = "#581C87";
-                    }}
+                    className="jx-btn jx-btn-purple jx-btn-sm"
                   >
-                    <WhatsAppIcon size={15} color="currentColor" />
+                    <WhatsAppIcon size={14} color="currentColor" />
                     <span>APPLY NOW</span>
                   </button>
                 </div>
@@ -854,24 +830,11 @@ export function HiringCompaniesSection() {
                 setActiveModalJob(null);
                 setQuickApplyJob(j);
               }}
-              className="jx-btn"
+              className="jx-btn jx-btn-purple"
               style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: 8,
-                background: "#581C87",
-                color: "#FFFFFF",
-                border: "none",
-                borderRadius: 999,
-                padding: "14px 24px",
-                fontFamily: "'Space Grotesk', sans-serif",
-                fontSize: 14.5,
-                fontWeight: 700,
-                cursor: "pointer",
                 width: "100%",
-                boxSizing: "border-box",
-                boxShadow: "0 10px 25px -4px rgba(88, 28, 135, 0.45)",
+                padding: "14px 24px",
+                fontSize: 14.5,
               }}
             >
               <WhatsAppIcon size={18} color="#FFFFFF" />
