@@ -301,6 +301,16 @@ input:focus, textarea:focus, select:focus {
   background-color: #FEF08A !important;
 }
 
+.jx-triple-purple:hover,
+.jx-triple-purple:focus-visible {
+  background-color: #FAF5FF !important;
+}
+
+.jx-triple-green:hover,
+.jx-triple-green:focus-visible {
+  background-color: #ECFDF5 !important;
+}
+
 /* ==========================================================================
    NEOBRUTALIST GLOBAL BUTTON DESIGN SYSTEM
    Signature hard 4px offset shadow, 2px solid dark border, and tactile press-in
