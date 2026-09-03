@@ -382,40 +382,17 @@ export function JobAlertCard() {
               {/* 3. SUBMIT PILL BUTTON */}
               <button
                 type="submit"
-                className="jx-btn"
+                className="jx-btn jx-btn-dark"
                 style={{
-                  background: "#0F172A",
-                  color: "#FFFFFF",
-                  border: "1px solid rgba(255, 255, 255, 0.18)",
-                  borderRadius: 999,
-                  height: 54,
-                  padding: "0 36px",
-                  fontFamily: "'Space Grotesk', sans-serif",
+                  height: 52,
+                  padding: "0 32px",
                   fontSize: 15,
-                  fontWeight: 700,
-                  letterSpacing: "0.06em",
-                  cursor: "pointer",
-                  boxShadow: "0 8px 24px rgba(15, 23, 42, 0.32)",
-                  transition: "all 0.25s cubic-bezier(0.16, 1, 0.3, 1)",
+                  letterSpacing: "0.04em",
                   flexShrink: 0,
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: 8,
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "linear-gradient(135deg, #1E293B 0%, #334155 100%)";
-                  e.currentTarget.style.transform = "translateY(-2px)";
-                  e.currentTarget.style.boxShadow = "0 12px 28px rgba(15, 23, 42, 0.42)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "#0F172A";
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "0 8px 24px rgba(15, 23, 42, 0.32)";
                 }}
               >
-                <span>SUBMIT</span>
-                <span style={{ fontSize: 16, fontWeight: 800 }}>&rarr;</span>
+                <span>Subscribe to Alerts</span>
+                <ArrowRight size={16} strokeWidth={2.4} />
               </button>
             </div>
           </form>
