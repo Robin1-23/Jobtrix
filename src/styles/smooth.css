@@ -141,3 +141,109 @@ input:focus, textarea:focus, select:focus {
   transform: translateY(-4px);
   box-shadow: 0 16px 36px -8px rgba(16, 25, 46, 0.16) !important;
 }
+
+/* ==========================================================================
+   INTERACTIVE DASHED-BORDER OFFSET CARDS (HYPER-UI STYLE)
+   ========================================================================== */
+.jx-offset-card-wrapper {
+  position: relative;
+  display: block;
+  height: 100%;
+  min-height: 330px;
+  cursor: pointer;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  text-align: left;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.jx-offset-dashed-bg {
+  position: absolute;
+  inset: 0;
+  border-width: 2px;
+  border-style: dashed;
+  border-radius: 22px;
+  z-index: 1;
+  transition: opacity 0.3s ease, transform 0.3s var(--ease-spring);
+}
+
+.jx-offset-card-inner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  min-height: 330px;
+  background: #FFFFFF;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 22px;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: transform 0.32s var(--ease-spring), box-shadow 0.32s var(--ease-spring), border-color 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  will-change: transform;
+}
+
+/* Hover Offset Shift */
+.jx-offset-card-wrapper:hover .jx-offset-card-inner,
+.jx-offset-card-wrapper:focus-visible .jx-offset-card-inner {
+  transform: translate(-8px, -8px);
+}
+
+/* Front & Reveal Content Layer Transitions */
+.jx-card-front {
+  padding: 28px 24px 22px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  transition: opacity 0.26s ease, transform 0.26s var(--ease-spring);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.jx-card-reveal {
+  position: absolute;
+  inset: 0;
+  padding: 26px 24px 22px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.28s ease, transform 0.28s var(--ease-spring);
+}
+
+/* Trigger Front -> Reveal switch on hover */
+.jx-offset-card-wrapper:hover .jx-card-front,
+.jx-offset-card-wrapper:focus-visible .jx-card-front {
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+}
+
+.jx-offset-card-wrapper:hover .jx-card-reveal,
+.jx-offset-card-wrapper:focus-visible .jx-card-reveal {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .jx-offset-card-wrapper .jx-offset-card-inner {
+    min-height: auto;
+  }
+  .jx-offset-card-wrapper:active .jx-offset-card-inner {
+    transform: translate(-5px, -5px);
+  }
+}
+
