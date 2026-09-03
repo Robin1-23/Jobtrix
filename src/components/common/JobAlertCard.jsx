@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MapPin, Locate, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
+import { MapPin, Locate, Loader2, CheckCircle2, AlertCircle, ArrowRight } from "lucide-react";
 import { leadService } from "../../services/leadService";
 
 // Strict Indian Mobile Number validator: Exactly 10 digits starting with 6, 7, 8, or 9

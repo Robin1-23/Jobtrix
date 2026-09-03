@@ -1,5 +1,5 @@
 import React from "react";
-import { BadgeCheck, ShieldCheck, Headphones, Navigation, MessageSquare, UserCheck, Target, CheckCircle2 } from "lucide-react";
+import { BadgeCheck, ShieldCheck, Headphones, Navigation, MessageSquare, UserCheck, Target, CheckCircle2, ArrowRight } from "lucide-react";
 import { TOKENS } from "../constants/tokens";
 import { Section } from "../components/common/Section";
 import { Reveal, TextReveal } from "../components/common/Reveal";
