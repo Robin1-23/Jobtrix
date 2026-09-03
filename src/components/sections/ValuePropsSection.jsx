@@ -31,7 +31,6 @@ export function ValuePropsSection() {
         solidBorder: "#6366F1",
         dashedBorder: "#818CF8",
         dashedBg: "rgba(99, 102, 241, 0.04)",
-        accentStripe: "linear-gradient(90deg, #6366F1, #818CF8)",
         iconBg: "linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%)",
         iconBorder: "1px solid rgba(99, 102, 241, 0.3)",
         iconColor: "#4F46E5",
@@ -54,7 +53,6 @@ export function ValuePropsSection() {
         solidBorder: "#0EA5E9",
         dashedBorder: "#38BDF8",
         dashedBg: "rgba(14, 165, 233, 0.04)",
-        accentStripe: "linear-gradient(90deg, #0EA5E9, #38BDF8)",
         iconBg: "linear-gradient(135deg, #E0F2FE 0%, #BAE6FD 100%)",
         iconBorder: "1px solid rgba(14, 165, 233, 0.3)",
         iconColor: "#0284C7",
@@ -76,7 +74,6 @@ export function ValuePropsSection() {
         solidBorder: "#F59E0B",
         dashedBorder: "#FBBF24",
         dashedBg: "rgba(245, 158, 11, 0.04)",
-        accentStripe: "linear-gradient(90deg, #F59E0B, #FBBF24)",
         iconBg: "linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%)",
         iconBorder: "1px solid rgba(245, 158, 11, 0.3)",
         iconColor: "#D97706",
@@ -202,19 +199,6 @@ export function ValuePropsSection() {
                     boxShadow: "0 10px 28px -10px rgba(16, 25, 46, 0.06), 0 2px 6px rgba(0, 0, 0, 0.02)",
                   }}
                 >
-                  {/* Top Glowing Gradient Accent Stripe */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      height: 4,
-                      background: c.theme.accentStripe,
-                      zIndex: 3,
-                    }}
-                  />
-
                   {/* FRONT DEFAULT STATE */}
                   <div className="jx-card-front">
                     <div>
